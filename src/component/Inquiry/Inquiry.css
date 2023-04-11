@@ -1,0 +1,8 @@
+.bg{
+    background-image: url('../../../public/assets/bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: block;
+    width: 100vw;
+    height: 100vh;
+}
