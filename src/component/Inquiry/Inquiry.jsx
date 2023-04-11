@@ -1,5 +1,4 @@
 import React, { useRef } from 'react'
-import './Inquiry.css'
 export default function Inquiry() {
 
     const form = useRef(0);
@@ -10,7 +9,7 @@ export default function Inquiry() {
 
     return (
         <>
-            <div className='bg'>
+            <div className=''>
                 <form ref={form} onSubmit={Submit}>
                     <div className="name-email">
                         <div className="name">
