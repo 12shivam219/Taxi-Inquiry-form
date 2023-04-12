@@ -5,10 +5,12 @@ import './HomePage.css'
 export default function HomePage() {
   return (
     <>
-    <div className='bg'>
-
-    <Inquiry/>
-    </div>
+      <div className='bg'>
+        <div className="h1">
+          Taxi Inquiry Form
+        </div>
+        <Inquiry />
+      </div>
     </>
   )
 }
