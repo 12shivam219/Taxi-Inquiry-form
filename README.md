@@ -14,57 +14,26 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+The code is a React component that creates a form for making inquiries. It uses the useRef and useState hooks to manage the state of the form inputs. It also uses the emailjs library to send the form data to an email service.
 
-### `npm run build`
+The form includes the following input fields:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+# Name: a text input for the name of the person making the inquiry
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+# Email: an email input for the email of the person making the inquiry
+# Phone Number: a text input for the phone number of the person making the inquiry
+# No Of Passengers: a number input for the number of passengers
+# Pickup Date: a date input for the pickup date
+# Pickup Time: a time input for the pickup time
+# Pickup Location: a text input for the pickup location
+# Dropoff Location: a text input for the dropoff location
+# Additional Information: a textarea input for any additional information the person making the inquiry wants to provide
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+### The component also includes some functions for validating the form and displaying a confirmation message when the form is submitted. When the form is submitted, the Submit function is called, which sends the form data to the email service using the emailjs library. After a delay of 3 seconds, the confirmationMessage function is called to display a confirmation message.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### we use # Email.js for receive User Information and reply back a confirmation message to user.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
