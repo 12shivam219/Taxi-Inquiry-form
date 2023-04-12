@@ -13,14 +13,22 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
-This is a React component named Inquiry. It imports React, useRef, useState, and the emailjs library. It exports the Inquiry function as a default export.
 
-The Inquiry function sets up a form using a ref to the form element. It also sets up a number of state variables to manage input fields in the form, including name, email, number, passenger, pickupDate, pickupTime, pickupLocation, DropoffLocation, and textarea.
 
-The function also defines minMonth, minDate, maxDate, maxYear, maxMonth, and maxDay constants, which are used to set the minimum and maximum date values for the pickupDate input field.
+The code is a React component that creates a form for making inquiries. It uses the useRef and useState hooks to manage the state of the form inputs. It also uses the emailjs library to send the form data to an email service.
 
-There is a validateForm function that is used to validate the email address entered in the email field.
+The form includes the following input fields:
 
-The Submit function is used to send the form data using the emailjs.sendForm method. It then resets the state variables for all input fields in the form.
+Name: a text input for the name of the person making the inquiry
+Email: an email input for the email of the person making the inquiry
+Phone Number: a text input for the phone number of the person making the inquiry
+No Of Passengers: a number input for the number of passengers
+Pickup Date: a date input for the pickup date
+Pickup Time: a time input for the pickup time
+Pickup Location: a text input for the pickup location
+Dropoff Location: a text input for the dropoff location
+Additional Information: a textarea input for any additional information the person making the inquiry wants to provide
+The component also includes some functions for validating the form and displaying a confirmation message when the form is submitted. When the form is submitted, the Submit function is called, which sends the form data to the email service using the emailjs library. After a delay of 3 seconds, the confirmationMessage function is called to display a confirmation message.
 
-The component returns a form with input fields for name, email, number, passenger, pickupDate, pickupTime, pickupLocation, DropoffLocation, and textarea. Each input field is connected to a state variable using the useState hook. The form also includes a submit button.
+
+
