@@ -1,20 +1,9 @@
-import React, { useState } from 'react'
+import React from 'react'
 
-export default function MiniInquiryForm({form,validateForm,Submit,name,email,number,passenger,pickupDate,
-    pickupTime,pickupLocation,DropoffLocation,textarea,minDate,sixMonthsFromNow,yes,main,setName,setEmail,setNumber,
-    setPassenger,setPickupDate,setPickupTime,setPickupLocation,setDropoffLocation,setTextarea,setYes,setMain}) {
-
-        console.log(form.current)
-    // Div displays
-    const [div1, setDiv1] = useState(false)
-    const [div2, setDiv2] = useState(false)
-    const [div3, setDiv3] = useState(false)
-    const [div4, setDiv4] = useState(true)
-    const [div5, setDiv5] = useState(true)
-    const [div6, setDiv6] = useState(true)
-    const [div7, setDiv7] = useState(false)
-    const [div8, setDiv8] = useState(false)
-    const [div9, setDiv9] = useState(false)
+export default function MiniInquiryForm({ form, validateForm, Submit,mes, name, email, number, passenger, pickupDate,
+    pickupTime, pickupLocation, DropoffLocation, textarea, minDate, sixMonthsFromNow, yes, main, setName, setEmail, setNumber,
+    setPassenger, setPickupDate, setPickupTime, setPickupLocation, setDropoffLocation, setTextarea, setYes, setMain,
+    div1,div2,div3,div4,div5,div6,div7,div8,div9,setDiv1,setDiv2,setDiv3,setDiv4,setDiv5,setDiv6,setDiv7,setDiv8,setDiv9,btn,setBtn }) {
 
     return (
         <>
@@ -88,7 +77,7 @@ export default function MiniInquiryForm({form,validateForm,Submit,name,email,num
                     }
 
                     <div className="submit py-2 text-center">
-                        <button className='button' type='submit' onClick={() => {
+                        <button className='button' type={main ? 'submit' : 'button'} onClick={() => {
                             if (passenger === '' || pickupDate === '') {
                                 setYes(false)
                                 setMain(false)
@@ -112,6 +101,7 @@ export default function MiniInquiryForm({form,validateForm,Submit,name,email,num
                                 }
                                 else {
                                     setMain(true)
+                                    setBtn(true)
                                     setDiv1(true)
                                     setDiv2(true)
                                     setDiv3(true)
@@ -123,10 +113,10 @@ export default function MiniInquiryForm({form,validateForm,Submit,name,email,num
                                     setDiv9(false)
                                 }
                             }
-                        }}>Next</button>
+                        }} > {btn ? 'Submit' : 'Next'}</button>
                     </div>
+                    {mes ? <p className='text-black shadow-2xl font-semibold font-mono text-[20px]'>Thank you for your message. It has been sent. we will get back touch to you shortly</p> : ''}
                 </form>
-
             </div >
         </>
     )

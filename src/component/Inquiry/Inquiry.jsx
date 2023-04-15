@@ -10,10 +10,23 @@ export default function Inquiry() {
     //Width
     const [width, setWidth] = useState(window.innerWidth)
 
-    //
+    //Button
+    const [btn, setBtn] = useState(false)
 
+    //Show next div's
     const [yes, setYes] = useState(false);
     const [main, setMain] = useState(false);
+
+    // Div displays
+    const [div1, setDiv1] = useState(false)
+    const [div2, setDiv2] = useState(false)
+    const [div3, setDiv3] = useState(false)
+    const [div4, setDiv4] = useState(true)
+    const [div5, setDiv5] = useState(true)
+    const [div6, setDiv6] = useState(true)
+    const [div7, setDiv7] = useState(false)
+    const [div8, setDiv8] = useState(false)
+    const [div9, setDiv9] = useState(false)
 
     useEffect(() => {
 
@@ -70,10 +83,29 @@ export default function Inquiry() {
                 console.log(error.text);
             });
 
-        setMes(true);
+        setMes(true)
+        setDiv1(false)
+        setDiv2(false)
+        setDiv3(false)
+        setDiv4(false)
+        setDiv5(false)
+        setDiv6(false)
+        setDiv7(false)
+        setDiv8(false)
+        setDiv9(false)
+        setBtn(false)
 
         setTimeout(() => {
             setMes(false);
+            setDiv1(false)
+            setDiv2(false)
+            setDiv3(false)
+            setDiv4(true)
+            setDiv5(true)
+            setDiv6(true)
+            setDiv7(false)
+            setDiv8(false)
+            setDiv9(false)
         }, 3000)
 
         setName('')
@@ -167,8 +199,10 @@ export default function Inquiry() {
                         </div>
                     </>
 
-                    : <MiniInquiryForm form={form} validateForm={validateForm} Submit={Submit} name={name} email={email} number={number} passenger={passenger} pickupDate={pickupDate} pickupTime={pickupTime} pickupLocation={pickupLocation} DropoffLocation={DropoffLocation} textarea={textarea} minDate={minDate} sixMonthsFromNow={sixMonthsFromNow} yes={yes} main={main}  
-                    setName={setName} setEmail={setEmail} setNumber={setNumber} setPassenger={setPassenger} setPickupDate={setPickupDate}  setPickupTime={setPickupTime} setPickupLocation={setPickupLocation} setDropoffLocation={setDropoffLocation} setTextarea={setTextarea} setYes={setYes} setMain={setMain} />
+                    : <MiniInquiryForm form={form} validateForm={validateForm} Submit={Submit} mes={mes} name={name} email={email} number={number} passenger={passenger} pickupDate={pickupDate} pickupTime={pickupTime} pickupLocation={pickupLocation} DropoffLocation={DropoffLocation} textarea={textarea} minDate={minDate} sixMonthsFromNow={sixMonthsFromNow} yes={yes} main={main}
+                        setName={setName} setEmail={setEmail} setNumber={setNumber} setPassenger={setPassenger} setPickupDate={setPickupDate} setPickupTime={setPickupTime} setPickupLocation={setPickupLocation} setDropoffLocation={setDropoffLocation} setTextarea={setTextarea} setYes={setYes} setMain={setMain}
+                        div1={div1} div2={div2} div3={div3} div4={div4} div5={div5} div6={div6} div7={div7} div8={div8} div9={div9} setDiv1={setDiv1}
+                        setDiv2={setDiv2} setDiv3={setDiv3} setDiv4={setDiv4} setDiv5={setDiv5} setDiv6={setDiv6} setDiv7={setDiv7} setDiv8={setDiv8} setDiv9={setDiv9} btn={btn} setBtn={setBtn} />
             }
         </>
 
